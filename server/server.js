@@ -1,12 +1,21 @@
+require('newrelic');
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const path = require('path');
 const router = require('./router');
 
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const app = express();
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
+
+app.use('/', express.static(PUBLIC_DIR));
+
+app.get('/loaderio-84551a8df323d7d918a888c8d69ed68c/', (req, res) => {
+  res.send('loaderio-84551a8df323d7d918a888c8d69ed68c');
+});
+
+
 app.use('/:listing_id', express.static(PUBLIC_DIR));
 
 // Handling asset requests for webpack bundles by passing off requests to the bundles router

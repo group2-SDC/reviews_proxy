@@ -43,23 +43,23 @@
 module.exports = {
   service1: {
     api: '/listings/:listing_id/carousel',
-    url: 'http://18.222.149.170:3000',
+    url: '54.191.59.96:3000', // fill this with ip address for nginx instance
     bundle: 'bundle.js',
   },
   service2: {
     api: '/listings/:listing_id/tours/*',
-    url: 'http://54.187.26.30:3002',
+    url: 'http://34.220.2.139:3002',
     bundle: 'bundle.js',
   },
   service3: {
     api: '/listings/:listing_id/reviews*',
-    url: 'http://localhost:3003',
+    url: '54.213.94.62:3000',
     bundle: 'bundle.js',
   },
   service4: {
     api: '/listings/:listing_id/questions/*',
-    url: 'http://18.237.144.53:3004',
-    bundle: 'bundle.js',
-  },
+    url: '52.32.38.183:3000',
+    bundle: 'bundle.js'
+  }
 };
 

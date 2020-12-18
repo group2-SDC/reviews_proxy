@@ -1,1 +1,0 @@
-ssh -i '/Users/marissa/Desktop/FEC/reviews_proxy/reviews_proxy.pem' ubuntu@ec2-18-188-142-123.us-east-2.compute.amazonaws.com
